@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+<div class="container" style="margin-top: 50px">
+      <h5>{{ title }}</h5>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+      {{ message }}
+      <p><a href="{{ link }}"">Continue</a></p>
+    </div>
+<div class="container">
+{% endblock %}
