@@ -11,24 +11,23 @@
   });
 
   document.body.style.backgroundColor = "#042763";
-  
+
 </script>
 
 <div class="container" style="margin-top: 50px">
   <div class="heads">
       <h4>Welcome to flocketIO!</h4>
       <h6>(a flask chat app with sockets...)<h6>
-      </div>
+  </div>
 {% endblock %}
 
 {% block body %}
-
 
   <div class="container">
     <div class="heads">
       <h5>Login:</h5>
         <form action="{{ url_for('login') }}" method="post">
-            <p><input type="text" class="form-control" name="username" placeholder="username"></p>
+            <p><input type="text" class="form-control" name="username" placeholder="username" minlength="3"></p>
             <p><button class="btn btn-info">Login</button></p>
         </form>
   </div>

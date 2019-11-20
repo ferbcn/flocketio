@@ -24,6 +24,7 @@
         </script>
 
         <script>
+
             document.body.style.backgroundColor = "#042763";
 
             // Start with first post.
@@ -119,7 +120,7 @@
               <h6>create a channel:</h6>
                   <form onsubmit="return false;">
                       <div class="input-group">
-                          <input pattern=".{3,20}" class="form-control" type="text" name="new_channel" placeholder="myChan" id="create_box">
+                          <input class="form-control" type="text" name="new_channel" placeholder="myChan" id="create_box" minlength="3">
                           <button class="btn btn-info" data-channel="createchan">Create</button>
                       </div>
                   </form>

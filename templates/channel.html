@@ -45,7 +45,6 @@
 
             // set load localStorage variables
             document.addEventListener('DOMContentLoaded', () => {
-
               document.body.style.backgroundColor = "#042763";
 
               if (!localStorage.getItem('pin_localstore')){
@@ -128,7 +127,7 @@
     </head>
 
     <body>
-      
+
       <div class="container">
 
           <div class="heads">
@@ -140,7 +139,7 @@
                 <h6>post a message:</h6>
                     <form onsubmit="return false;">
                         <div class="input-group">
-                            <input type="text" class="form-control" name="new_message" id="message_box"></text></td>
+                            <input type="text" class="form-control" name="new_message" id="message_box" minlength="2"></text></td>
                             <button class="btn btn-info" data-channel="sendmes">Send</button>
                         </div>
                     </form>
@@ -148,9 +147,6 @@
           </div>
 
       <div id="posts"></div>
-
-      <h5>open channels:</h5>
-      <div id="chans"></div>
 
     </body>
 
