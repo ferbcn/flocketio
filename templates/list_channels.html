@@ -17,13 +17,14 @@
                   {% raw -%}
                       {{ contents }}
                   {%- endraw %}
-                  <button class="join btn btn-danger">Join</button>
+                  <button class="join btn btn-info">Join</button>
               </div>
             </div>
           </div>
         </script>
 
         <script>
+            document.body.style.backgroundColor = "#042763";
 
             // Start with first post.
             let counter = 1;
@@ -52,7 +53,7 @@
             document.addEventListener('click', event => {
                 var element = event.target;
 
-                if (element.className === 'join btn btn-danger') {
+                if (element.className === 'join btn btn-info') {
                     element.parentElement.style.animationPlayState = 'running';
                     element.parentElement.addEventListener('animationend', () =>  {
                         var name_burried_in_div_element = element.parentElement.innerHTML;
@@ -107,29 +108,26 @@
         </script>
     </head>
     <body>
-      <div class="container" style="margin-top: 20px">
+      <div class="container">
         <!--<svg id="svg">-->
-          <div class="heads">
-            <button id="logout" class="btn btn-danger" data-channel="logout">Logout</button>
-              <br>
-              username:
-              <h4><span class='name'>{{ username }}</span></h4>
+            <div class="heads">
+            <button id="logout" class="btn btn-info" data-channel="logout">Logout</button>
+            <br>
+            username:
+            <h4><span class='name'>{{ username }}</span></h4>
             <div class="input-area">
-                <table><tr>
-                  <td><h6>create a channel:</h6>
-                    <form onsubmit="return false;">
-                  <input class="form-control" name="new_message" type="text" maxlength="55" id="create_box" width="100px"></input></td>
-                  <td><button class="btn btn-danger" data-channel="createchan" style="float: right">Create</button></td>
-                    </form>
-                </tr></table>
-              </div>
-          </div>
+              <h6>create a channel:</h6>
+                  <form onsubmit="return false;">
+                      <div class="input-group">
+                          <input pattern=".{3,20}" class="form-control" type="text" name="new_channel" placeholder="myChan" id="create_box">
+                          <button class="btn btn-info" data-channel="createchan">Create</button>
+                      </div>
+                  </form>
+            </div>
+        </div>
 
-          <hr>
+        <h5>open channels:</h5>
+        <div id="chans"></div>
 
-            <h5>open channels:</h5>
-            <div id="chans"></div>
-
-      </div>
     </body>
 </html>

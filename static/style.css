@@ -1,11 +1,17 @@
+
+table {
+  margin-left: 5%;
+  width: 90%;
+}
+
 .post_id{
-  color: #042763;
+  color: white;
   font-size: 0px;
 }
 
 .input-area{
-  color: #042763;
-	background: #ffffff;
+  color: white;
+	background: #042763;
 	padding: 5px;
   padding-left: 5%;
 	overflow: hidden;
@@ -13,9 +19,16 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	border-top: 1px solid #cfdae1;
+  border-radius: 10px;
   z-index: -1;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-right: 40px;
+}
+
+.container {
   margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 @keyframes hide {
@@ -57,7 +70,7 @@
         height: 100%;
         line-height: 100%;
         padding: 30px;
-        background-color: #8c1520;
+        background-color: #042763;
     }
 }
 
@@ -68,6 +81,7 @@
         line-height: 100%;
         padding: 30px;
         margin-bottom: 10px;
+        background-color: #042763;
 
     }
     50% {
@@ -75,14 +89,14 @@
         height: 100%;
         line-height: 100%;
         padding: 30px;
-        background-color: #8c1520;
+        background-color: white;
     }
     100% {
         opacity: 1;
         height: 100%;
         line-height: 100%;
         padding: 30px;
-        background-color: #042763;
+        background-color: lightblue;
     }
 }
 
@@ -121,45 +135,40 @@
 }
 
 .post {
-    color: white;
-    background-color: #042763;
+    color: #042763;
+    background-color: lightblue;
     padding: 50px;
     margin-bottom: 10px;
     animation-name: appear;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-play-state: play;
+    border-radius: 10px;
+
 }
 
 .chans {
-    color: white;
-    background-color: #042763;
+    color: #042763;
+    background-color: lightblue;
     padding: 50px;
     margin-bottom: 10px;
     animation-name: join;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-play-state: paused;
+    border-radius: 10px;
 }
 
 .heads {
-    color: white;
-    background-color: #042763;
+    color: #042763;
+    background-color: lightblue;
     padding: 50px;
     margin-bottom: 10px;
     animation-name: join;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-play-state: paused;
-}
-
-body {
-    padding-bottom: 50px;
-}
-
-table {
-  margin-left: 5%;
-  width: 90%;
+    border-radius: 10px;
 }
 
 #svg {
